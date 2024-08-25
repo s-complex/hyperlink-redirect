@@ -53,7 +53,7 @@
 	<p>你即将跳转到下述链接：</p>
 	<p class="text-sm">{linkParams}</p>
 	<p>我们无法保证这个链接是否可用、可信。是否继续跳转？</p>
-	<a class="bg-sky-600 rounded-lg text-white p-2 m-2 shadow-lg no-underline" href={linkParams}
+	<a class="bg-sky-600 rounded-lg text-white dark:text-white p-2 m-2 shadow-lg no-underline" href={linkParams}
 		>继续跳转</a
 	>
 	<p class="text-sm">{isLoading ? '尝试检查链接状态...' : websiteStatus}</p>
