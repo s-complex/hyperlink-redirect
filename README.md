@@ -21,10 +21,10 @@ GET https://api.slirv.vip/url-check?check=https://www.gxres.net
 
 返回的内容如下：
 
-``` json
+```json
 {
-    "statusCode": 200,
-    "statusMessage": "OK"
+	"statusCode": 200,
+	"statusMessage": "OK"
 }
 ```
 

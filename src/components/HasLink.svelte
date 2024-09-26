@@ -29,7 +29,7 @@
 				if (data.statusCode === 200) {
 					websiteStatus = `链接状态正常（${data.statusCode} ${data.statusMessage}）`;
 				} else if (data.statusCode === 403) {
-                    websiteStatus = `该链接拦截了 API 发出的测试（${data.statusCode} ${data.statusMessage}）`
+					websiteStatus = `该链接拦截了 API 发出的测试（${data.statusCode} ${data.statusMessage}）`;
 				} else {
 					websiteStatus = `链接状态似乎异常：${data.statusCode} ${data.statusMessage}`;
 				}
@@ -48,13 +48,25 @@
 <div class="flex justify-center">
 	<div class="text-6xl i-fe-warning" />
 </div>
-<section class="typo text-center">
-	<h1>即将进行跳转</h1>
+<section class="typo text-center space-y-4">
+	<h1 class="text-2xl">即将进行跳转</h1>
 	<p>你即将跳转到下述链接：</p>
 	<p class="text-sm">{linkParams}</p>
 	<p>我们无法保证这个链接是否可用、可信。是否继续跳转？</p>
-	<a class="bg-sky-600 rounded-lg text-white dark:text-white p-2 m-2 shadow-lg no-underline" href={linkParams}
-		>继续跳转</a
-	>
+	<div>
+		<a
+			class="bg-blue-100 dark:bg-blue-900 rounded-lg p-2 text-black dark:text-white shadow-lg no-underline"
+			href={linkParams}>继续跳转</a
+		>
+	</div>
 	<p class="text-sm">{isLoading ? '尝试检查链接状态...' : websiteStatus}</p>
 </section>
+
+<style>
+	h1 {
+		--apply: 'text-2xl my-4';
+	}
+	p {
+		--apply: 'text-base my-4';
+	}
+</style>
