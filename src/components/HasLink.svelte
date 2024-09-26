@@ -46,7 +46,7 @@
 </script>
 
 <div class="flex justify-center">
-	<div class="text-6xl i-fe-warning" />
+	<div class="i-fe-warning text-6xl" />
 </div>
 <section class="typo text-center space-y-4">
 	<h1 class="text-2xl">即将进行跳转</h1>
@@ -55,7 +55,7 @@
 	<p>我们无法保证这个链接是否可用、可信。是否继续跳转？</p>
 	<div>
 		<a
-			class="bg-blue-100 dark:bg-blue-900 rounded-lg p-2 text-black dark:text-white shadow-lg no-underline"
+			class="rounded-lg bg-blue-100 p-2 text-black no-underline shadow-lg dark:bg-blue-900 dark:text-white"
 			href={linkParams}>继续跳转</a
 		>
 	</div>

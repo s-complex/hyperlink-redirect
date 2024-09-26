@@ -16,9 +16,9 @@
 	></script>
 </svelte:head>
 
-<div class="p-4 h-svh mx-auto max-w-2xl flex items-center justify-center">
+<div class="mx-auto max-w-2xl flex items-center justify-center p-4 h-svh">
 	<slot />
-	<footer class="absolute text-center bottom-4">
+	<footer class="absolute bottom-4 text-center">
 		<p>
 			Hyperlink Redirect by <a href="https://slirv.vip">Sliver Complex</a>. Powered by SvelteKit.
 		</p>

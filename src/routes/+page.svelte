@@ -11,7 +11,7 @@
 	});
 </script>
 
-<div class="p-4 m-4 w-full bg-white dark:bg-zinc-800 rounded-lg shadow-lg">
+<div class="m-4 w-full rounded-lg bg-white p-4 shadow-lg dark:bg-zinc-800">
 	{#if linkParams !== null}
 		<HasLink />
 	{:else}

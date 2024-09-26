@@ -1,5 +1,5 @@
 <div class="flex justify-center">
-	<div class="text-6xl i-fe-question" />
+	<div class="i-fe-question text-6xl" />
 </div>
 <section class="text-center">
 	<h1>你迷路了吗？</h1>
