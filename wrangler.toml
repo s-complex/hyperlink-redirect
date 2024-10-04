@@ -1,0 +1,6 @@
+name = "blog"
+compatibility_date = "2023-05-18"
+assets = { directory = "./build" }
+
+[observability]
+enabled = true
