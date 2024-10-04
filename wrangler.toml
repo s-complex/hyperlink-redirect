@@ -1,4 +1,4 @@
-name = "blog"
+name = "hyperlink-redirect"
 compatibility_date = "2023-05-18"
 assets = { directory = "./build" }
 
