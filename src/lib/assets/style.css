@@ -1,0 +1,25 @@
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+}
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: system-ui, sans-serif;
+	color-scheme: light dark;
+}
+
+body {
+	--apply: 'bg-gradient-to-r from-blue-200 from-5% via-sky-200 via-30% to-cyan-200 dark:from-blue-800 dark:via-sky-800 dark:to-cyan-800 to-80%';
+}
+
+a {
+	--apply: 'text-sky-700 dark:text-sky-300 no-underline hover:underline';
+}
