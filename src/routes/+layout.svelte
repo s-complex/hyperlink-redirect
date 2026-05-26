@@ -8,7 +8,7 @@
 <svelte:head>
 	<title>Hyperlink Redirect</title>
 	<meta name="description" content="Hyperlink Redirect by Sliver Complex." />
-	<link rel="icon" type="image/webp" href="https://library.gxres.net/images/icons/favicon.webp" />
+	<link rel="icon" type="image/webp" href="https://library.gxres.net/images/icons/favicon.ico" />
 	<link rel="preconnect" href="https://library.gxres.net" crossorigin="" />
 	<link rel="canonical" href="https://link.gxres.net/" />
 </svelte:head>
