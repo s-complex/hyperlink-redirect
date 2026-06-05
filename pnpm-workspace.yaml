@@ -1,0 +1,4 @@
+allowBuilds:
+  '@swc/core': true
+minimumReleaseAgeExclude:
+  - svelte@5.56.2

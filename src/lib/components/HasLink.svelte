@@ -1,8 +1,30 @@
+<script module lang="ts">
+	import { create, attrs } from '@stylexjs/stylex';
+
+	const hasLinkComponentStyles = create({
+		emojiContainer: {
+			display: 'flex',
+			justifyContent: 'center'
+		},
+		contentContainer: {
+			display: 'grid',
+			gap: '0.75rem',
+			textAlign: 'center'
+		},
+		cardTitle: {
+			fontSize: '1.5rem'
+		},
+		cardHint: {
+			fontSize: '0.875rem'
+		}
+	});
+</script>
+
 <script lang="ts">
 	let { url }: { url: string } = $props();
 </script>
 
-<div class="grid place-items-center">
+<div {...attrs(hasLinkComponentStyles.emojiContainer)}>
 	<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 32 32"
 		><!-- Icon from Fluent Emoji Flat by Microsoft Corporation - https://github.com/microsoft/fluentui-emoji/blob/main/LICENSE --><g
 			fill="none"
@@ -28,9 +50,14 @@
 		></svg
 	>
 </div>
-<section class="text-center gap-3 grid">
-	<h1 class="text-2xl">即将进行跳转</h1>
-	<p>你即将跳转到下述链接：</p>
+<section {...attrs(hasLinkComponentStyles.contentContainer)}>
+	<h1 {...attrs(hasLinkComponentStyles.cardTitle)}>即将访问外部网站</h1>
+	<p>你正在尝试访问下述链接：</p>
 	<a href={url} rel="noopener noreferrer">{url}</a>
-	<p class="text-sm">无法保证这个链接是否可用且可信，请谨慎选择是否继续访问。</p>
+	<div>
+		<p {...attrs(hasLinkComponentStyles.cardHint)}>
+			注意：该网站不属于 Sliver Complex，我们无法保证其可用和可信状况。
+		</p>
+		<p {...attrs(hasLinkComponentStyles.cardHint)}>请经过慎重思考后，点击该链接继续访问。</p>
+	</div>
 </section>

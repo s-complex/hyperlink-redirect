@@ -10,7 +10,7 @@ jobs:
     strategy:
       matrix:
         node-version: [24]
-        pnpm-version: [10]
+        pnpm-version: [11]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,21 +22,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{matrix.node-version}}
-      - name: Cache node_modules
-        uses: actions/cache@v4
-        env:
-          cache-name: project-node-modules
-        with:
-          path: node_modules
-          key: ${{runner.os}}-${{env.cache-name}}-${{hashFiles('package.json')}}
+          cache: "pnpm"
       - name: Install dependencies
         run: pnpm install
       - name: Build static assets
         run: pnpm build
       - name: Deploy to Cloudflare Workers
-        uses: cloudflare/wrangler-action@v3.14.1
+        uses: cloudflare/wrangler-action@v3
         with:
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
           apiToken: ${{ secrets.CF_API_TOKEN }}
           command: deploy
-          wranglerVersion: '4.50.0'
+          wranglerVersion: '4.95.0'

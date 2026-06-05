@@ -1,4 +1,23 @@
-<div class="flex justify-center">
+<script module lang="ts">
+	import { create, attrs } from '@stylexjs/stylex';
+
+	const noLinkComponentStyles = create({
+		emojiContainer: {
+			display: 'flex',
+			justifyContent: 'center'
+		},
+		contentContainer: {
+			display: 'grid',
+			gap: '0.75rem',
+			textAlign: 'center'
+		},
+		cardTitle: {
+			fontSize: '1.5rem'
+		}
+	})
+</script>
+
+<div {...attrs(noLinkComponentStyles.emojiContainer)}>
 	<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 32 32"
 		><!-- Icon from Fluent Emoji Flat by Microsoft Corporation - https://github.com/microsoft/fluentui-emoji/blob/main/LICENSE --><g
 			fill="none"
@@ -15,8 +34,8 @@
 		></svg
 	>
 </div>
-<section class="text-center gap-3 grid">
-	<h1 class="text-2xl">你怎么在这里？</h1>
+<section {...attrs(noLinkComponentStyles.contentContainer)}>
+	<h1 {...attrs(noLinkComponentStyles.cardTitle)}>你怎么在这里？</h1>
 	<p>请确保携带了正确的 Query Params 访问本站。</p>
-	<a href="https://insli.cc" rel="noopener noreferrer">← Back to Sliver Complex</a>
+	<a href="https://sirvr.win" rel="noopener noreferrer">← Back to Sliver Complex</a>
 </section>

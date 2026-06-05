@@ -1,3 +1,5 @@
+@stylex;
+
 * {
 	margin: 0;
 	padding: 0;
@@ -17,9 +19,30 @@ html {
 }
 
 body {
-	--apply: 'bg-gradient-to-r from-blue-200 from-5% via-sky-200 via-30% to-cyan-200 dark:from-blue-800 dark:via-sky-800 dark:to-cyan-800 to-80%';
+	background-image: linear-gradient(to right,
+			#bfdbfe 5%,
+			#bae6fd 30%,
+			#a5f3fc 80%);
 }
 
 a {
-	--apply: 'text-sky-700 dark:text-sky-300 no-underline hover:underline';
+	color: #0369a1;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-image: linear-gradient(to right,
+				#1e40af 5%,
+				#075985 30%,
+				#155e75 80%);
+	}
+
+	a {
+		color: #7dd3fc;
+	}
 }
