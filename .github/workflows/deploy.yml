@@ -14,15 +14,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Prepare pnpm ${{matrix.pnpm-version}}
-        uses: pnpm/action-setup@v4
-        with:
-          version: ${{matrix.pnpm-version}}
       - name: Prepare Node.js ${{matrix.node-version}}
         uses: actions/setup-node@v4
         with:
           node-version: ${{matrix.node-version}}
           cache: "pnpm"
+      - name: Prepare pnpm ${{matrix.pnpm-version}}
+        uses: pnpm/action-setup@v4
+        with:
+          version: ${{matrix.pnpm-version}}
+
       - name: Install dependencies
         run: pnpm install
       - name: Build static assets
