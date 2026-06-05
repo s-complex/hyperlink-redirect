@@ -37,5 +37,5 @@
 <section {...attrs(noLinkComponentStyles.contentContainer)}>
 	<h1 {...attrs(noLinkComponentStyles.cardTitle)}>你怎么在这里？</h1>
 	<p>请确保携带了正确的 Query Params 访问本站。</p>
-	<a href="https://sirvr.win" rel="noopener noreferrer">← Back to Sliver Complex</a>
+	<a href="https://sirvr.win" rel="noopener noreferrer">← 返回 Sliver Complex</a>
 </section>
